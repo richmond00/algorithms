@@ -16,7 +16,7 @@
 
 /**
  * @param {string} s
- * @return {number}
+ * @return {boolean}
  */
 var isPalindrome = function (s) {
   let result = false;
