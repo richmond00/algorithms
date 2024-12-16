@@ -1,15 +1,17 @@
 function levelOrder(root) {
-  if (!root) return;
+  if (!root) {
+    return;
+  }
 
-  let result = [];
-  let queue = [];
-  queue.push(root);
+  let res = [];
+  let q = [];
+  q.push(root);
 
-  while (queue.length) {
+  while (q.length) {
     const shifted = q.shift();
-    result.push(shifted.val);
+    res.push(shifted.val);
 
-    if (shifted.left) queue.push(shifted.val);
-    if (shifted.right) queue.push(shifted.val);
+    if (shifted.left) q.push(shifted.left);
+    if (shifted.right) q.push(shifted.right);
   }
 }
